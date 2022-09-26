@@ -1,6 +1,9 @@
-import { Box, Button, TextField } from "@mui/material";
 import React, { useState } from "react";
+import Button from "@mui/material/Button"; // tambahkan ini untuk import butto
+import { TextField } from '@mui/material';
+import { Grid } from '@mui/material';
 
+import Box from '@mui/material/Box';
 // Form dapat dibuat dengan TextField
 // https://mui.com/material-ui/react-text-field/#basic-textfield
 // dan Card
@@ -13,6 +16,7 @@ const ContactForm = ({ fnaddContact }) => {
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
     const [photo, setPhoto] = useState("");
+
 
     const onChangeInput = (event, stateName) => {
         stateName(event.currentTarget.value);
@@ -33,8 +37,17 @@ const ContactForm = ({ fnaddContact }) => {
         setPhoto("")
     }
 
+
+
     function generate_button(placehol, tipe, valueName, stateName) {
         return (
+            // <input
+            //     placeholder={placehol}
+            //     type={tipe}
+            //     onChange={event => onChangeInput(event, stateName)}
+            //     value={valueName}
+            //     style={{ margin: "0.5em" }}
+            // />
             <TextField
                 size="small"
                 type={tipe}
@@ -44,6 +57,7 @@ const ContactForm = ({ fnaddContact }) => {
                 variant='filled'
             ></TextField>
         );
+        // return <input placeholder={placehol} type={tipe} />
     }
     return (
         <div>
@@ -63,6 +77,9 @@ const ContactForm = ({ fnaddContact }) => {
                 {generate_button('Photo URL', 'text', photo, setPhoto)}<br></br>
                 <Button color="success" type="submit" >ADD NEW</Button>
             </Box>
+
+            {/* <form style={{ margin: "0.5em 0em" }} onSubmit={onSubmitHandler}>
+            </form> */}
         </div>
     );
 };

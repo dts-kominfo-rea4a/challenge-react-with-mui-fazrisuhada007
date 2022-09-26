@@ -1,13 +1,21 @@
 // Terima props lalu tampilkan dalam Contact component
 // Contact component dapat berupa MUI ListItem
 // https://mui.com/material-ui/react-list/#folder-list
-import { Avatar, List, ListItem, ListItemAvatar, ListItemButton, ListItemText, Typography } from '@mui/material';
 import React from 'react';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListItemAvatar from '@mui/material/ListItemAvatar';
+import Avatar from '@mui/material/Avatar';
+import Typography from '@mui/material/Typography';
+import ListItemButton from '@mui/material/ListItemButton';
 
 
 // Kalian bisa membuat CSS sendiri di src/components/Contact.css
 // atau langsung tambahkan dengan sx={{}}
 const Contact = ({ data }) => {
+
+
     // Contact berisi foto, nama, telepon, dan email
     return (
         <div>
@@ -23,7 +31,7 @@ const Contact = ({ data }) => {
                                     <ListItemText
                                         primary={value.name}
                                         secondary={
-                                            <>
+                                            <React.Fragment>
                                                 <Typography
                                                     sx={{ display: 'inline' }}
                                                     component="span"
@@ -33,7 +41,9 @@ const Contact = ({ data }) => {
                                                     {value.phone}<br></br>
                                                     {value.email}
                                                 </Typography>
-                                            </>
+
+                                            </React.Fragment>
+
                                         }
                                     />
                                 </ListItemButton>
@@ -41,7 +51,12 @@ const Contact = ({ data }) => {
                         );
 
                     })}
+
                 </List>
+                <ul>
+
+
+                </ul>
             </div>
         </div>
     );
