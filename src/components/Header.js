@@ -15,9 +15,9 @@ const Header = () => {
       <Typography variant="h3">
         Call a Friend
       </Typography>
-
+      
       <Typography variant="subtitle1">Your friendly contact app</Typography>
-      <Divider variant="inset" />
+      <Divider variant="inset"  />
       <br></br>
     </>
   );

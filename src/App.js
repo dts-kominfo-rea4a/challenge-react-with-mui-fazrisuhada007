@@ -30,7 +30,7 @@ const App = () => {
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: 'center',
-    margin: '0.5em',
+    margin:'0.5em',
     color: theme.palette.text.secondary,
   }));
 

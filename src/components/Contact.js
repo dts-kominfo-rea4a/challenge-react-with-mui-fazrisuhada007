@@ -1,3 +1,4 @@
+
 // Terima props lalu tampilkan dalam Contact component
 // Contact component dapat berupa MUI ListItem
 // https://mui.com/material-ui/react-list/#folder-list
@@ -20,7 +21,7 @@ const Contact = ({ data }) => {
     return (
         <div>
             <div>
-                <List sx={{ width: '100%', bgcolor: 'background.paper' }} aria-label="contacts">
+                <List sx={{ width: '100%',  bgcolor: 'background.paper' }} aria-label="contacts">
                     {data.map((value, key) => {
                         return (
                             <ListItem disablePadding key={key}>
@@ -63,3 +64,5 @@ const Contact = ({ data }) => {
 };
 
 export default Contact;
+
+
